@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,14 @@
     <meta name="keywords"
         content="córdoba, sierras de córdoba, valle hermoso, hotel, hosteria,valle de las sierras, valle de las sierras hotel, hoteles con pileta en Valle Hermoso, vacaciones, verano, rios en cordoba, fin de semana, finde largo, alojamiento familiar en Córdoba para Semana Santa, hoteles económicos en Sierras de Córdoba,  la falda, cosquin, festival,festival de cosquin, cabañas cerca de Cosquín Rock, festival del folclore, avicultura, carrera del rio pinto, rally mundial, cosquin rock, ¿Qué hacer en Valle Hermoso?, ¿Dónde alojarse cerca del Festival de Cosquín?, ¿Cuál es la mejor época para visitar Córdoba?">
     <title>Valle de las Sierras Hotel</title>
-    <link rel="shortcut icon" href="./img/favicon (1).ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="../index.html">
-                <img src="./img/logo hotel vs.png" alt="VS Hotel Logo" class="logo-img">
+            <a href="./index.html">
+                <img src="./img/Sierras_del_valle sin fondo.png" alt="VS Hotel Logo" class="logo-img">
             </a>
         </div>
         <nav>
@@ -33,7 +35,7 @@
                 <span></span>
             </div>
         </nav>
-    </header>    
+    </header>
     <main>
         <section class="hero">
             <h1 class="animate__animated animate__slideInLeft">Un espacio de libertad, tranquilidad y desconexión</h1>
@@ -50,34 +52,68 @@
                     Ya sean unas vacaciones, o solo una escapada de fin de semana, nuestra ubicación preferencial le
                     permitirá conocer todos los atractivos de la zona.
                     Somos una familia que, actualmente en su segunda generación, se dedica con pasión a la gestión del
-                    hotel. Nos estamos renovando constantemente para ofrecer un mejor servicio cada día.</p>
-                <p>¡Los esperamos para atenderlos con el mismo cariño, calidez y esmero de siempre!</p>
+                    hotel. Nos estamos renovando constantemente para ofrecer un mejor servicio cada día.
+                </p>
+                <p>¡Los esperamos para atenderlos con el mismo cariño, calidez y esmero de siempre!
+                </p>
             </div>
         </section>
         <section class="habitaciones">
-            <div>
+            <div class="room">
                 <h3>Habitaciones</h3>
+                <p>Siéntase como en casa en nuestras acogedoras habitaciones, todas equipadas con baño privado y TV con
+                    cable. Para mayor comodidad, nuestras habitaciones superiores también cuentan con aire
+                    acondicionado. Ofrecemos unidades familiares de dos habitaciones con baño, así como habitaciones
+                    triples, ideales para grupos pequeños.
+                </p>
+                <P>
+                    La hostería dispone de una selección exclusiva de habitaciones, cada una diseñada para garantizar
+                    una estadía tranquila y relajada. Todas cuentan con acceso directo al jardín, donde podrá disfrutar
+                    de la naturaleza y la serenidad del entorno.
+                </P>
+                <P>
+                    Además, si lo desea, puede reservar Hotel Valle de las Sierras en su totalidad para grupos grandes o
+                    familiares, asegurando una experiencia privada y personalizada en un entorno privilegiado.
+                </P>
             </div>
-            <div class="tarjetitas">
+            <div class="carousel-wrapper" id="carousel-1">
+                <div class="carousel-slide">
+                    <img src="./img/hab cama doble.png" alt="doble">
+                    <img src="./img/baño puerta.png" alt="baño puerta">
+                    <img src="./img/baño lav.png" alt="baño lav">
+                </div>
+                <button class="prev" id="prev-1" onclick="moveSlide(-1, 'carousel-1')">&#10094;</button>
+                <button class="next" id="next-1" onclick="moveSlide(1, 'carousel-1')">&#10095;</button>
+            </div>
+            <div class="services">
+                <h4>Disfrutá de estas comodidades:</h4>
+                <ul class="services-list">
+                    <li><img src="./img/patio.png" alt="Parque">Parque</li>
+                    <li><img src="./img/piscina.png" alt="Piscina">Piscina</li>
+                    <li><img src="./img/cafe.png" alt="Desayuno">Desayuno</li>
+                    <li><img src="./img/wi-fi-gratis.png" alt="WiFi Gratis">WiFi Gratis</li>
+                    <li><img src="./img/ducha.png" alt="Baño Privado">Baño Privado</li>
+                    <li><img src="./img/toalla.png" alt="Ropa de Blanco">Ropa de Blanco</li>
+                    <li><img src="./img/estacionamiento.png" alt="Estacionamiento">Estacionamiento</li>
+                </ul>
             </div>
         </section>
         <section class="galeria">
             <h3>Galería de Imágenes</h3>
-                <div class="carousel">
-                    <div class="carousel-slide">
-                        <img src="./img/comedor 1.png" alt="Comedor 1">
-                        <img src="./img/comedor 2.png" alt="Comedor 2">
-                        <img src="./img/patio.jpg" alt="Patio">
-                        <img src="./img/piscina 1.png" alt="Piscina 1">
-                        <img src="./img/piscina 2.png" alt="Piscina 2">
-                        <img src="./img/quincho.png" alt="Quincho">
-                        <img src="./img/piscina lejos.png" alt="Piscina Lejos">
-                        <img src="./img/dormitorio 1.png" alt="Dormitorio 1"> <img src="./img/piscina.png"
-                            alt="Piscina">
-                    </div>
-                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            <div class="carousel-wrapper" id="carousel-2">
+                <div class="carousel-slide">
+                    <img src="./img/comedor 1.png" alt="Comedor 1">
+                    <img src="./img/comedor 2.png" alt="Comedor 2">
+                    <img src="./img/patio.jpg" alt="Patio">
+                    <img src="./img/piscina 1.png" alt="Piscina 1">
+                    <img src="./img/piscina 2.png" alt="Piscina 2">
+                    <img src="./img/quincho.png" alt="Quincho">
+                    <img src="./img/piscina lejos.png" alt="Piscina Lejos">
+                    <img src="./img/hab cama doble.png" alt="Dormitorio">
                 </div>
+                <button class="prev" id="prev-2" onclick="moveSlide(-1, 'carousel-2')">&#10094;</button>
+                <button class="next" id="next-2" onclick="moveSlide(1, 'carousel-2')">&#10095;</button>
+            </div>
         </section>
         <section class="pagar">
             <div class="forma">
@@ -101,11 +137,10 @@
     </main>
     <footer>
         <div class="icono">
-            <img src="./img/logo hotel vs.png" alt="icono hotel">
+            <img src="./img//Sierras_del_valle sin fondo.png" alt="icono hotel">
         </div>
         <div class="contacto">
             <p>Contactanos</p>
-            <p>Teléfono 03548 470076</p>
             <p>WhatsApp +5493548418060</p>
             <p>Dirección Carlos Pelegrini 149.
             <p>Valle Hermoso. Córdoba</p>
@@ -119,17 +154,23 @@
         <div class="redes">
             <a href="http://www.facebook.com/profile.php?id=61568918704314&mibextid=ZbWKwL" target="_blank"
                 rel="noopener noreferrer"><img src="./img/facebook.png" alt="icono facebook"></a>
-            <a href="http://www.instagram.com/valledelassierrashotel" target="_blank" rel="noopener noreferrer"><img src="./img/instagram.png" alt="icono instagram"></a>
-            <a href="mailto:info@valledelassierras.com" target="_blank" rel="noopener noreferrer"><img src="./img/email.png" alt="icono mail"></a>
-        </div>
-        <div class="fixed">
-            <a href="https://api.whatsapp.com/send/?phone=%2B5493548418060&text&type=phone_number&app_absent=0"target="_blank" rel="noopener noreferrer"><img src="./img/whatsapp.png" alt="whats" class="icon-bounce"></a>
+            <a href="http://www.instagram.com/valledelassierrashotel" target="_blank" rel="noopener noreferrer"><img
+                    src="./img/instagram.png" alt="icono instagram"></a>
+            <a href="mailto:info@valledelassierras.com" target="_blank" rel="noopener noreferrer"><img
+                    src="./img/email.png" alt="icono mail"></a>
         </div>
     </footer>
+    <div class="fixed">
+        <a href="https://api.whatsapp.com/send/?phone=%2B5493548418060&text&type=phone_number&app_absent=0"
+            target="_blank" rel="noopener noreferrer"><img src="./img/whatsapp.png" alt="whats"
+                class="icon-bounce"></a>
+    </div>
     <div class="copyright">
-        <a href="http://www.linkedin.com/in/vanesagudiño" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin.png" alt="linkedin"></a>
+        <a href="http://www.linkedin.com/in/vanesagudiño" target="_blank" rel="noopener noreferrer"><img
+                src="./img/linkedin.png" alt="linkedin"></a>
         <p>Desarrollo</p>
     </div>
     <script src="./scripts.js"></script>
 </body>
+
 </html>

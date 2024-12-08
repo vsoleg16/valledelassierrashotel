@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: "Figtree", sans-serif;
+    font-family: "Figtree";
     overflow-x: hidden;
 }
 
@@ -25,25 +25,25 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 0 50px;
     position: fixed;
     top: 0;
     z-index: 1000;
     box-sizing: border-box;
+    transition: background-color 0.3s;
 }
 
 .logo {
-    flex: 1;
     display: flex;
     justify-content: left;
     padding: 0;
-    margin-left: 40px;
+    align-items: center;
 }
 
 .logo-img {
     height: 100px;
     max-height: 100px;
-
+    margin: 0;
 }
 
 .nav-links {
@@ -67,12 +67,12 @@ a {
 .nav-links a {
     text-decoration: none;
     color: rgb(70, 68, 66);
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: rosybrown;
+    color: black;
     text-decoration: underline;
 }
 
@@ -92,14 +92,16 @@ a {
     .logo {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex: none;
         width: 100%;
-        margin: 0;
+        margin-left: 0;
     }
 
     .logo-img {
-        height: 100px;
+        max-width: 100px;
         max-height: 100px;
+        margin-top: 5px;
     }
 
     .nav-links {
@@ -110,6 +112,7 @@ a {
         top: 100px;
         background: #fff;
         padding: 5px;
+        margin-right: 0;
         width: 100%;
         border-top: 1px #ccc;
     }
@@ -137,7 +140,7 @@ a {
         align-items: center;
         cursor: pointer;
         position: absolute;
-        bottom: 5px;
+        bottom: 10px;
         right: 20px;
     }
 
@@ -146,10 +149,9 @@ a {
         height: 1px;
         width: 30px;
         background: rgb(70, 68, 66);
-        margin: 4px 0;
+        margin: 3px 0;
         transition: all 0.3s ease;
     }
-
 }
 
 /*---------------------------------- HERO INDEX ----------------------------------------*/
@@ -212,10 +214,10 @@ a {
     width: 100%;
     max-width: 600px;
     height: auto;
-    margin: 40px auto 5px;
+    margin: 40px auto;
     border-radius: 2px;
-    border: 2px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #afafaf;
+    box-shadow: 40px rgba(36, 35, 35, 0.1);
 }
 
 .descripcion div h2 {
@@ -262,16 +264,16 @@ a {
     }
 
     .descripcion div h2 {
-        font-size: 25px;
-        color: rgb(70, 68, 66);
-        font-weight: 600;
+        font-size: 30px;
+        font-weight: 500;
+        color: rgb(222, 183, 128);
         text-align: center;
         margin-top: 20px;
         margin-bottom: 20px;
     }
 
     .descripcion div p {
-        font-size: 14px;
+        font-size: 15px;
         color: rgb(70, 68, 66);
         display: flex;
         justify-content: center;
@@ -297,13 +299,14 @@ a {
     }
 
     .descripcion div h2 {
-        font-size: 30px;
-        color: rgb(70, 68, 66);
+        font-size: 25px;
+        font-weight: 500;
+        color: rgb(222, 183, 128);
         margin-bottom: 10px;
     }
 
     .descripcion div p {
-        font-size: 14px;
+        font-size: 15px;
         color: rgb(70, 68, 66);
     }
 }
@@ -312,62 +315,68 @@ a {
 
 .habitaciones {
     background-color: rgb(243, 232, 218);
-    height: 600px;
-    margin-top: 35px;
+    max-height: auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: start;
 }
 
-.habitaciones h3 {
-    font-size: 30px;
+
+.room {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.room h3 {
+    font-size: 25px;
     text-align: center;
     color: rgb(70, 68, 66);
-    padding-top: 25px;
-    padding-bottom: 5px;
-    position: relative;
+    margin: 20px;
 }
 
+.room p {
+    font-size: 15px;
+    color: rgb(70, 68, 66);
+    text-align: center;
+    max-width: 80%;
+    margin-top: 20px;
+}
 
-/*------------------------ GALERIA INDEX ------------------------------*/
-
-.galeria h3 {
+.carousel-wrapper {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     display: flex;
+    justify-content: center;
     align-items: center;
     position: relative;
-    justify-content: center;
-    font-size: 30px;
-    margin: 20px;
-    padding: 20px;
-    color: rgb(70, 68, 66);
-}
-
-.galeria {
-    text-align: center;
-    padding: 5px;
-}
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
     width: 100%;
-    max-width: 1200px;
-    /* Expande un poco más el carrusel */
-    margin: 0 auto;
-    /* Centra el carrusel */
-    padding: 0 5px;
-    /* Reduce los márgenes laterales */
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-height: 650px;
 }
 
 .carousel-slide {
     display: flex;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide img {
+#carousel-1 .carousel-slide img {
     flex: 0 0 auto;
-    width: calc(25% - 5px);
-    /* Muestra 4 imágenes a la vez y ajusta el margen */
-    margin: 5px;
-    /* Mantiene un pequeño margen entre las imágenes */
+    width: 50%;
+    margin: 0 5px;
+    max-height: 400px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .prev,
@@ -397,29 +406,170 @@ a {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.services {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
+    text-align: center;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.services h4 {
+    font-size: 20px;
+    color: rgb(70, 68, 66);
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.services-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.services-list li {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(70, 68, 66);
+    gap: 10px;
+}
+
+.services-list img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    .habitaciones {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .room h3 {
+        margin: 10px;
+        color: rgb(70, 68, 66);
+        font-size: 22px;
+    }
+
+    .room p {
+        margin: 10px;
+        font-size: 15px;
+        color: rgb(70, 68, 66);
+    }
+
+    #carousel-1 .carousel-slide img {
+        flex: 0 0 auto;
+        max-width: 400px;
+        margin: 0;
+        max-height: 300px;
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .services-list li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+/*------------------------ GALERIA INDEX ------------------------------*/
+.galeria {
+    text-align: center;
+    padding: 20px;
+    height: auto;
+}
+
+.galeria h3 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    font-size: 25px;
+    margin: 20px;
+    padding: 20px;
+    color: rgb(70, 68, 66);
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#carousel-2 .carousel-slide img {
+    flex: 0 0 auto;
+    width: calc(25% - 5px);
+    margin: 0 5px;
+    
+}
+
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 @media (max-width: 1200px) {
-    .carousel-slide img {
+    #carousel-2 .carousel-slide img {
         width: calc(33.33% - 10px);
-        /* Muestra 3 imágenes a la vez */
     }
 }
 
 @media (max-width: 768px) {
     .galeria h3 {
-        font-size: 25px;
+        font-size: 22px;
         padding: 20px;
         text-align: center;
     }
 
-    .carousel-slide img {
+    #carousel-2 .carousel-slide img {
         width: calc(100% - 10px);
-        /* Muestra 2 imágenes a la vez */
     }
 }
 
 @media (min-width: 320px) and (max-width:480px) {
     .galeria h3 {
-        font-size: 20px;
+        font-size: 22px;
         color: rgb(70, 68, 66);
         padding: 10px;
         text-align: center;
@@ -435,13 +585,13 @@ a {
 
 .forma {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .forma h3 {
     position: relative;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(70, 68, 66);
     text-align: center;
     margin: 20px;
@@ -462,22 +612,21 @@ a {
 }
 
 .pago img {
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
 .pago p {
     margin: 10px;
-    font-size: 17px;
+    font-size: 15px;
     color: rgb(70, 68, 66);
 }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .forma h3 {
-        font-size: 25px;
+        font-size: 22px;
         color: rgb(70, 68, 66);
-        margin-bottom: 30px;
     }
 
     .pago {
@@ -487,17 +636,14 @@ a {
     }
 
     .pago img {
-        width: 80px;
+        width: 50px;
     }
 }
 
-@media (min-width: 320px) and (max-width:480px) {
-    .pagar {
-        margin-bottom: 50px;
-    }
+@media screen and (max-width:480px) {
 
     .forma h3 {
-        font-size: 18px;
+        font-size: 22px;
         color: rgb(70, 68, 66);
         position: relative;
         display: flex;
@@ -512,9 +658,9 @@ a {
     }
 
     .pago img {
-        width: 80px;
+        height: auto;
+        width: 50px;
     }
-
 }
 
 /*------- -------------------- FOOTER INDEX ----------------------------------*/
@@ -527,17 +673,18 @@ footer {
     grid-template-rows: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    padding: 10px;
     height: auto;
 }
 
-footer .icono {
+footer div{
     margin: 20px;
     padding: 10px;
+}
+
+footer .icono {
     display: flex;
     justify-content: center;
     align-content: center;
-    text-align: center;
 }
 
 footer .icono img {
@@ -570,7 +717,6 @@ footer .maps iframe {
 }
 
 footer .redes {
-    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,16 +735,9 @@ footer .redes a:hover img {
     transform: scale(1.2);
 }
 
-footer .fixed a {
-    position: fixed;
-    bottom: 240px;
-    right: 50px;
-    width: 0;
-    height: 30px;
-}
-
 /*-------------animación de rebote------------*/
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -631,7 +770,6 @@ footer .fixed a {
         justify-items: center;
         align-items: center;
         gap: 20px;
-        padding: 10px;
         max-height: auto;
     }
 
@@ -667,7 +805,6 @@ footer .fixed a {
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 10px;
-        padding: 10px;
         height: auto;
     }
 
@@ -680,7 +817,7 @@ footer .fixed a {
 
     .contacto {
         margin-bottom: 5px;
-        font-size: 14px;
+        font-size: 15px;
         color: rgb(70, 68, 66);
         text-align: center;
     }
@@ -701,6 +838,16 @@ footer .fixed a {
     }
 }
 
+/*------------Whatsapp---------------*/
+
+.fixed a {
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    width: 0;
+    height: 30px;
+}
+
 /*------------------------MI PORTFOLIO-----------------*/
 
 .copyright {
@@ -708,7 +855,7 @@ footer .fixed a {
     background-color: rgb(128, 123, 158);
     display: flex;
     justify-content: flex-end;
-    padding: 5px;
+    /*padding: 5px;*/
 }
 
 .copyright img {
@@ -717,7 +864,7 @@ footer .fixed a {
     width: auto;
 }
 
-.copyright p{
+.copyright p {
     margin: 5px;
     color: white;
     font-size: 10px;
@@ -725,7 +872,7 @@ footer .fixed a {
 
 /*---------------------------- PAGE HABITACIONES ---------------------------------*/
 
-.habitacion {
+.dormis {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -736,7 +883,7 @@ footer .fixed a {
     align-items: center;
 }
 
-.habitacion img {
+.dormis img {
     width: 100%;
     height: auto;
 }
@@ -751,8 +898,8 @@ footer .fixed a {
     text-align: center;
 }
 
-.informacion h5 {
-    font-size: 20px;
+.informacion h3 {
+    font-size: 25px;
     color: rgb(70, 68, 66);
     text-align: center;
     margin: 0;
@@ -760,7 +907,7 @@ footer .fixed a {
 }
 
 .informacion p {
-    font-size: 14px;
+    font-size: 15px;
     color: rgb(70, 68, 66);
 }
 
@@ -769,113 +916,9 @@ footer .fixed a {
     padding: 0;
     margin-left: 70px;
     text-align: justify;
-    font-size: 14px;
+    font-size: 15px;
 }
 
-@media (min-width:768px) and (max-width: 1028px) {
-    .habitacion {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        align-items: start;
-    }
-
-    .habitacion img {
-        grid-column: 1 / 3;
-        /*imagen ocupa toda la fila*/
-        width: 100%;
-        height: auto;
-    }
-
-    .informacion {
-        grid-column: 1 / 2;
-        /*la primera columna*/
-        text-align: center;
-    }
-
-    .comodidades {
-        grid-column: 2/3;
-        /*la segunda columna*/
-        margin-top: 40px;
-    }
-
-    .comodidades ul li {
-        list-style-type: circle;
-        list-style-position: inside;
-        text-align: justify;
-    }
-}
-
-@media (min-width:480px) and (max-width: 768px) {
-    .habitacion {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        align-items: start;
-    }
-
-    .habitacion img {
-        grid-column: 1/2;
-        /*imagen ocupa toda la fila*/
-        width: 100%;
-        height: auto;
-    }
-
-    .informacion {
-        grid-column: 1/2;
-        /*la primera columna*/
-        text-align: center;
-    }
-
-    .comodidades {
-        grid-column: 1/2;
-        /*la segunda columna*/
-        margin-top: 10px;
-    }
-
-    .comodidades ul li {
-        list-style-type: circle;
-        list-style-position: inside;
-        text-align: justify;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
-    .habitacion {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        align-items: start;
-    }
-
-    .habitacion img {
-        grid-column: 1;
-        /*imagen ocupa toda la fila*/
-        width: 100%;
-        height: auto;
-    }
-
-    .informacion {
-        grid-column: 1;
-        /*la primera columna*/
-        text-align: center;
-    }
-
-    .comodidades {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-column: 1;
-        /*comodidades ocupan toda la fila*/
-        margin-top: 10px;
-    }
-
-    .comodidades ul li {
-        list-style-type: circle;
-        list-style-position: inside;
-        text-align: justify;
-    }
-}
 
 /*---------------------------- PAGE ACTIVIDADES -----------------------------------*/
 
@@ -888,20 +931,18 @@ footer .fixed a {
 }
 
 .actividades h2 {
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(222, 183, 128);
     font-weight: 600;
     text-align: center;
     margin: 15px 30px;
 }
 
-.actividades h5 {
+.actividades h4 {
     color: rgb(70, 68, 66);
     font-size: 20px;
     text-align: left;
-    /* Cambiado a left para alinear a la izquierda */
     width: 100%;
-    /* Asegura que el título ocupe todo el ancho disponible */
     margin-left: 50px;
     padding-top: 10px
 }
@@ -911,12 +952,12 @@ footer .fixed a {
     color: rgb(70, 68, 66);
     align-self: flex-start;
     margin: 5px 40px;
-    /* Aumentado el margen en los laterales */
 }
 
 .turismo {
+    height: auto;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     background-color: rgb(243, 232, 218);
 }
 
@@ -925,33 +966,33 @@ footer .fixed a {
     font-size: 25px;
 }
 
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 50px;
-    justify-content: center;
-    padding: 20px;
-    max-width: 900px;
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
     margin: 0 auto;
     box-sizing: border-box;
+    box-shadow: 40px rgba(32, 32, 32, 0.1);
 }
 
 .card {
     background-color: white;
-    border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px;
-    padding: 10px;
-    max-width: 400px;
+    width: 100%;
+    max-width: 450px;
     height: 100%;
-    max-height: 600px;
+    max-height: 400px;
 }
 
 .card:hover {
@@ -959,11 +1000,9 @@ footer .fixed a {
 }
 
 .card img {
-    margin: 10px;
-    padding: 5px;
     width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .card-body {
@@ -975,10 +1014,11 @@ footer .fixed a {
 }
 
 .card-text {
-    font-size: 15px;
+    font-size: 17px;
     color: rgb(70, 68, 66);
     margin-bottom: auto;
     text-align: center;
+    padding: 20px;
 }
 
 .card a {
@@ -990,7 +1030,7 @@ footer .fixed a {
     transition: background-color 0.3s ease;
     text-align: center;
     margin-top: auto;
-    /* Esto mueve el botón hacia el final del div */
+    /* mueve el botón hacia el final del div */
     align-self: center;
     padding: 12px;
 }
@@ -1000,8 +1040,7 @@ footer .fixed a {
 }
 
 
-
-@media (max-width:940px) {
+@media screen and (min-width: 760px) and (max-width:940px) {
     .actividades {
         display: flex;
         flex-direction: column;
@@ -1009,36 +1048,32 @@ footer .fixed a {
 
     .actividades h2 {
         font-size: 30px;
-        color: rgb(70, 68, 66);
+        color: rgb(222, 183, 128);
+        font-weight: bolder;
         font-weight: 150;
         text-align: center;
         margin: 10px;
     }
 
-    .actividades h5 {
+    .actividades h4 {
         text-align: justify;
-        font-size: 22px;
+        font-size: 20px;
         color: rgb(70, 68, 66);
     }
 
     .actividades p {
-        font-size: 18px;
+        font-size: 17px;
         color: rgb(70, 68, 66);
     }
 
-    .turismo .cards-container {
+    .turismo .cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /*dos columnas iguales*/
         grid-template-rows: auto auto;
-        /*dos filas*/
         gap: 25px;
         justify-items: center;
         align-items: center;
         margin: 20px;
-        padding: 20px;
-        max-width: 800px;
-        height: 100%;
         grid-template-areas:
             "cardm cardg"
             "cardw cardw";
@@ -1059,13 +1094,12 @@ footer .fixed a {
     .turismo .card {
         background-color: white;
         width: 100%;
-        /* Ajustar a las columnas */
+        max-height: 500px;
         max-width: 300px;
-        /* Limitar el ancho */
     }
 }
 
-@media (max-width: 620px) {
+@media screen and (max-width: 760px) {
     .actividades {
         display: flex;
         flex-direction: column;
@@ -1073,58 +1107,47 @@ footer .fixed a {
 
     .actividades h2 {
         font-size: 25px;
-        color: rgb(70, 68, 66);
+        color: rgb(222, 183, 128);
         font-weight: 100;
         text-align: center;
         margin: 10px;
     }
 
-    .actividades h5 {
+    .actividades h4 {
         text-align: justify;
         font-size: 20px;
         color: rgb(70, 68, 66);
     }
 
     .actividades p {
-        font-size: 18px;
+        font-size: 16px;
         color: rgb(70, 68, 66);
     }
 
     .turismo {
         display: flex;
-        /* Habilita el sistema flex en turismo */
         flex-direction: column;
-        /* Asegura que los elementos se apilen */
         align-items: center;
-        /* Centra los hijos horizontalmente */
     }
 
     .turismo h3 {
-        font-size: 25px;
+        font-size: 22px;
         color: rgb(70, 68, 66);
         text-align: center;
         /* Centra el texto del título */
     }
 
-    .turismo .cards-container {
+    .turismo .cards {
         display: flex;
         flex-direction: column;
-        /* Apila las tarjetas en columna */
         align-items: center;
-        /* Centra las tarjetas horizontalmente */
         gap: 30px;
-        /* Espacio entre tarjetas */
         margin-bottom: 20px;
-        width: 100%;
-        /* Asegura que el contenedor ocupe todo el ancho */
-        max-width: 500px;
-        /* Limita el ancho máximo del contenedor */
     }
 
     .turismo .card {
         width: 100%;
-        max-width: 300px;
-        /* Ajusta el ancho máximo de las tarjetas */
+        max-width: 400px;
         height: 100%;
         max-height: 600px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1173,6 +1196,7 @@ footer .fixed a {
     max-height: 400px;
     border-radius: 10px;
     border: none;
+
 }
 
 .custom-container .comunicate .contactanos {
@@ -1186,16 +1210,17 @@ footer .fixed a {
     max-width: 600px;
     box-sizing: border-box;
     margin: 0 auto;
+    box-shadow: 40px rgba(83, 83, 83, 0.1);
 }
 
-.custom-container .comunicate .contactanos h6 {
-    font-size: 28px;
+.custom-container .comunicate .contactanos h3 {
+    font-size: 25px;
     text-align: justify;
     margin: 10px;
 }
 
 .custom-container .comunicate .contactanos p {
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(70, 68, 66);
     font-weight: bold;
     text-align: justify;
@@ -1244,7 +1269,7 @@ footer .fixed a {
         box-sizing: border-box;
     }
 
-    .custom-container .contactanos h6 {
+    .custom-container .contactanos h3 {
         font-size: 25px;
         color: rgb(70, 68, 66);
         text-align: center;
@@ -1252,7 +1277,7 @@ footer .fixed a {
     }
 
     .custom-container .contactanos p {
-        font-size: 20px;
+        font-size: 16px;
         color: rgb(70, 68, 66);
         font-weight: bold;
         text-align: justify;
