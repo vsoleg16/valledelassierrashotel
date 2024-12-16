@@ -58,60 +58,71 @@
             </div>
         </section>
         <section class="habitaciones">
-            <div class="room">
-                <h3>Habitaciones</h3>
-                <p>Siéntase como en casa en nuestras acogedoras habitaciones, todas equipadas con baño privado y TV con
-                    cable. Para mayor comodidad, nuestras habitaciones superiores también cuentan con aire
-                    acondicionado. Ofrecemos unidades familiares de dos habitaciones con baño, así como habitaciones
-                    triples, ideales para grupos pequeños.
-                </p>
-                <P>
-                    El hotel dispone de una selección exclusiva de habitaciones, cada una diseñada para garantizar
-                    una estadía tranquila y relajada. Todas cuentan con acceso directo al jardín, donde podrá disfrutar
-                    de la naturaleza y la serenidad del entorno.
-                </P>
-                <P>
-                    Además, si lo desea, puede reservar Hotel Valle de las Sierras en su totalidad para grupos grandes o
-                    familiares, asegurando una experiencia privada y personalizada en un entorno privilegiado.
-                </P>
-            </div>
-            <div class="carousel-wrapper" id="carousel-1">
-                <div class="carousel-slide">
-                    <img src="./img/hab cama doble.png" alt="doble">
-                    <img src="./img/baño puerta.png" alt="baño puerta">
-                    <img src="./img/baño lav.png" alt="baño lav">
+            <div class="info-column">
+                <div class="room">
+                    <h3>Habitaciones</h3>
+                    <p>Siéntase como en casa en nuestras acogedoras habitaciones, todas equipadas con baño privado y TV
+                        con cable. Para mayor comodidad, nuestras habitaciones superiores también cuentan con aire
+                        acondicionado. Ofrecemos unidades familiares de dos habitaciones con baño, así como habitaciones
+                        triples, ideales para grupos pequeños.
+                    </p>
+                    <p>El hotel dispone de una selección exclusiva de habitaciones, cada una diseñada para garantizar
+                        una estadía tranquila y relajada. Todas cuentan con acceso directo al jardín, donde podrá
+                        disfrutar
+                        de la naturaleza y la serenidad del entorno.
+                    </p>
+                    <p>Además, si lo desea, puede reservar Hotel Valle de las Sierras en su totalidad para grupos
+                        grandes o familiares, asegurando una experiencia privada y personalizada en un entorno
+                        privilegiado.
+                    </p>
                 </div>
-                <button class="prev" id="prev-1" onclick="moveSlide(-1, 'carousel-1')">&#10094;</button>
-                <button class="next" id="next-1" onclick="moveSlide(1, 'carousel-1')">&#10095;</button>
+                <div class="services">
+                    <h4>Disfrutá de estas comodidades:</h4>
+                    <ul class="services-list">
+                        <li><img src="./img/patio.png" alt="Parque">Parque</li>
+                        <li><img src="./img/piscina.png" alt="Piscina">Piscina</li>
+                        <li><img src="./img/cafe.png" alt="Desayuno">Desayuno</li>
+                        <li><img src="./img/wi-fi-gratis.png" alt="WiFi Gratis">WiFi Gratis</li>
+                        <li><img src="./img/ducha.png" alt="Baño Privado">Baño Privado</li>
+                        <li><img src="./img/toalla.png" alt="Ropa de Blanco">Ropa de Blanco</li>
+                        <li><img src="./img/estacionamiento.png" alt="Estacionamiento">Estacionamiento</li>
+                    </ul>
+                </div>
             </div>
-            <div class="services">
-                <h4>Disfrutá de estas comodidades:</h4>
-                <ul class="services-list">
-                    <li><img src="./img/patio.png" alt="Parque">Parque</li>
-                    <li><img src="./img/piscina.png" alt="Piscina">Piscina</li>
-                    <li><img src="./img/cafe.png" alt="Desayuno">Desayuno</li>
-                    <li><img src="./img/wi-fi-gratis.png" alt="WiFi Gratis">WiFi Gratis</li>
-                    <li><img src="./img/ducha.png" alt="Baño Privado">Baño Privado</li>
-                    <li><img src="./img/toalla.png" alt="Ropa de Blanco">Ropa de Blanco</li>
-                    <li><img src="./img/estacionamiento.png" alt="Estacionamiento">Estacionamiento</li>
-                </ul>
-            </div>
+            <div class="carousel-1">
+                <div class="item-carousel1" id="slider">
+                    <div class="slider-section"> <img src="./img/hab cama doble.png" alt="doble"
+                            onclick="openModal(this.src)"> </div>
+                    <div class="slider-section"> <img src="./img/baño puerta.png" alt="baño puerta"
+                            onclick="openModal(this.src)"> </div>
+                    <div class="slider-section"> <img src="./img/habitacion.esquina.png" alt="doble esquina"
+                            onclick="openModal(this.src)"> </div>
+                    <div class="slider-section"> <img src="./img/baño lav.png" alt="baño lav"
+                            onclick="openModal(this.src)"> </div>
+                    <div class="slider-section"> <img src="./img/dormitorio205.png" alt="dormi205"
+                            onclick="openModal(this.src)"> </div>
+                    <div class="slider-section"> <img src="./img/dormi206.png" alt="dormi206"
+                            onclick="openModal(this.src)"> </div>
+                </div>
+                <div class="btn-left"><</div>
+                <div class="btn-right">></div>
+                </div>
         </section>
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
         <section class="galeria">
             <h3>Galería de Imágenes</h3>
             <div class="carousel-wrapper" id="carousel-2">
                 <div class="carousel-slide">
-                    <img src="./img/comedor 1.png" alt="Comedor 1">
-                    <img src="./img/comedor 2.png" alt="Comedor 2">
-                    <img src="./img/patio.jpg" alt="Patio">
-                    <img src="./img/piscina 1.png" alt="Piscina 1">
-                    <img src="./img/piscina 2.png" alt="Piscina 2">
-                    <img src="./img/quincho.png" alt="Quincho">
-                    <img src="./img/piscina lejos.png" alt="Piscina Lejos">
-                    <img src="./img/hab cama doble.png" alt="Dormitorio">
+                    <img src="./img/comedor 1.png" alt="Comedor 1" onclick="openModal(this.src)">
+                    <img src="./img/comedor 2.png" alt="Comedor 2" onclick="openModal(this.src)">
+                    <img src="./img/patio.jpg" alt="Patio" onclick="openModal(this.src)">
+                    <img src="./img/piscina 1.png" alt="Piscina 1" onclick="openModal(this.src)">
+                    <img src="./img/piscina 2.png" alt="Piscina 2" onclick="openModal(this.src)">
+                    <img src="./img/quincho.png" alt="Quincho" onclick="openModal(this.src)">
                 </div>
-                <button class="prev" id="prev-2" onclick="moveSlide(-1, 'carousel-2')">&#10094;</button>
-                <button class="next" id="next-2" onclick="moveSlide(1, 'carousel-2')">&#10095;</button>
             </div>
         </section>
         <section class="pagar">
@@ -119,15 +130,15 @@
                 <h3>Formas de Pago</h3>
             </div>
             <div class="pago">
-                <div>
+                <div class="efectivo">
                     <img src="./img/efectivo.png" alt="efectivo">
                     <p>Efectivo</p>
                 </div>
-                <div>
-                    <img src="./img/pago-con-tarjetas-de-credito.png" alt="tarjetas">
+                <div class="tarjetas">
+                    <img src="./img/tarjetas-de-credito.png" alt="tarjetas">
                     <p>Tarjetas de Crédito</p>
                 </div>
-                <div>
+                <div class="transferencia">
                     <img src="./img/transferencia.png" alt="transferencia">
                     <p>Transferencia Bancaria</p>
                 </div>
@@ -138,9 +149,15 @@
         <div class="icono">
             <img src="./img//Sierras_del_valle sin fondo.png" alt="icono hotel">
         </div>
+        <div class="redes">
+            <a href="http://www.facebook.com/profile.php?id=61568918704314&mibextid=ZbWKwL" target="_blank"
+                rel="noopener noreferrer"><img src="./img/-facebook.png" alt="icono facebook"></a>
+            <a href="http://www.instagram.com/valledelassierrashotel" target="_blank" rel="noopener noreferrer"><img
+                    src="./img/-instagram.png" alt="icono instagram"></a>
+        </div>
         <div class="contacto">
             <p>Contactanos</p>
-            <p>WhatsApp +5493548418060</p>
+            <p>WhatsApp +5493548604401</p>
             <p>Dirección Carlos Pelegrini 149.
             <p>Valle Hermoso. Córdoba</p>
         </div>
@@ -150,17 +167,10 @@
                 width="300" height="100" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="redes">
-            <a href="http://www.facebook.com/profile.php?id=61568918704314&mibextid=ZbWKwL" target="_blank"
-                rel="noopener noreferrer"><img src="./img/facebook.png" alt="icono facebook"></a>
-            <a href="http://www.instagram.com/valledelassierrashotel" target="_blank" rel="noopener noreferrer"><img
-                    src="./img/instagram.png" alt="icono instagram"></a>
-        </div>
     </footer>
     <div class="fixed">
-        <a href="https://api.whatsapp.com/send/?phone=%2B5493548418060&text&type=phone_number&app_absent=0"
-            target="_blank" rel="noopener noreferrer"><img src="./img/whatsapp.png" alt="whats"
-                class="icon-bounce"></a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B5493548604401&text&type=phone_number&app_absent=0"
+            target="_blank" rel="noopener noreferrer"><img src="./img/whatsapp.png" alt="whats" class="icon-bounce"></a>
     </div>
     <div class="copyright">
         <a href="http://www.linkedin.com/in/vanesagudiño" target="_blank" rel="noopener noreferrer"><img
