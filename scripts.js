@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideDuration = 3000;
 
         function cloneSlides() {
-            const cloneCount = slides.children.length / 2; 
+            const cloneCount = slides.children.length; 
             for (let i = 0; i < cloneCount; i++) {
                 const clone = slides.children[i].cloneNode(true);
                 slides.appendChild(clone);

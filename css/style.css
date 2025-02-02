@@ -560,6 +560,8 @@ a {
         width: calc(25%);
         margin: 0 5px;
         border-radius: 15px;
+        object-fit: cover;
+        height: 350px;
     }
 
     @media screen and (max-width: 1200px) {
