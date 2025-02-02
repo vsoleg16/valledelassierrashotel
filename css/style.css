@@ -567,6 +567,7 @@ a {
     @media screen and (max-width: 1200px) {
         .carousel-slide img {
             width: calc(33.33% - 10px);
+            height: 350px;
         }
     }
 
@@ -578,7 +579,8 @@ a {
         }
 
         .carousel-slide img {
-            width: calc(100% - 10px);
+            width: calc(50% - 10px);
+            height: 350px;
         }
     }
 
@@ -588,6 +590,11 @@ a {
             color: rgb(70, 68, 66);
             padding: 10px;
             text-align: center;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 350px; 
         }
     }
 
