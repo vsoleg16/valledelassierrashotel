@@ -319,7 +319,7 @@ a {
     gap: 30px;
     position: relative;
     height: auto;
-    max-height: 700px;
+    max-height: 600px;
     overflow: hidden;
 }
 
@@ -391,7 +391,7 @@ a {
     position: relative;
     overflow: hidden;
     max-width: 500px;
-    height: 600px;
+    height: 500px;
     margin: auto;
 }
 
@@ -480,14 +480,14 @@ a {
     cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1170px) {
     .habitaciones {
         display: flex;
         flex-direction: column;
         gap: 30px;
         padding: 20px;
         height: auto;
-        max-height: 1400px;
+        max-height: 1200px;
     }
 
     .room h3 {
@@ -562,13 +562,13 @@ a {
         margin: 0 5px;
         border-radius: 15px;
         object-fit: cover;
-        height: 350px;
+        height: 300px;
     }
 
     @media screen and (max-width: 1200px) {
         .carousel-slide img {
             width: calc(33.33% - 10px);
-            height: 350px;
+            height: 340px;
         }
     }
 
